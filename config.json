@@ -58,8 +58,8 @@
 		"arguments": {
 			"execute": {
 				"inArguments": [],
-                    {
 				 "outArguments": [
+                    {
                         "weather": {
                             "dataType": "Text",
                             "direction": "out",
