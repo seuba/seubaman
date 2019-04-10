@@ -26,7 +26,8 @@
     },
     "configurationArguments": {
        "save": {
-          
+          "url": "https://weatheralbert.herokuapp.com/",
+		  "verb": "POST"
        },
        "publish": {
           "url": "https://weatheralbert.herokuapp.com/",
