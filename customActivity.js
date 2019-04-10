@@ -78,7 +78,7 @@ define([
 
     function onGetEndpoints (endpoints) {
          Response: endpoints = { restHost: "https://weatheralbert.herokuapp.com/" } 
-        console.log('hola' + endpoints);
+        console.log('holaS' + endpoints.restHost);
     }
 
     function onClickedNext () {
