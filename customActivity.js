@@ -9,10 +9,8 @@ define([
     var payload = {};
     var lastStepEnabled = false;
     var steps = [ // initialize to the same value as what's set in config.json for consistency
-        { "label": "Pas 1", "key": "step1" },
-        { "label": "Pas  2", "key": "step2" },
-        { "label": "Pas  3", "key": "step3" },
-        { "label": "Pas  4", "key": "step4", "active": false }
+        { "label": "Step 1", "key": "step1" },
+		{ "label": "Step 2", "key": "step2" }
     ];
     var currentStep = steps[0].key;
 
@@ -21,37 +19,17 @@ define([
     connection.on('initActivity', initialize);
     connection.on('requestedTokens', onGetTokens);
     connection.on('requestedEndpoints', onGetEndpoints);
-
-    connection.on('clickedNext', onClickedNext);
+	connection.on('clickedNext', onClickedNext);
     connection.on('clickedBack', onClickedBack);
     connection.on('gotoStep', onGotoStep);
 
     function onRender() {
         // JB will respond the first time 'ready' is called with 'initActivity'
         connection.trigger('ready');
-
-        connection.trigger('requestTokens');
+		connection.trigger('requestTokens');
         connection.trigger('requestEndpoints');
-
-        // Disable the next button if a value isn't selected
-        $('#select1').change(function() {
-            var message = getMessage();
-            connection.trigger('updateButton', { button: 'next', enabled: Boolean(message) });
-
-            $('#message').html(message);
-        });
-
-        // Toggle step 4 active/inactive
-        // If inactive, wizard hides it and skips over it during navigation
-        $('#toggleLastStep').click(function() {
-            lastStepEnabled = !lastStepEnabled; // toggle status
-            steps[3].active = !steps[3].active; // toggle active
-
-            connection.trigger('updateSteps', steps);
-        });
-    }
-
-    function initialize (data) {
+	}
+	function initialize (data) {
         if (data) {
             payload = data;
         }
@@ -82,7 +60,7 @@ define([
         } else {
             $('#select1').find('option[value='+ message +']').attr('selected', 'selected');
             $('#message').html(message);
-            showStep(null, 3);
+            showStep(null, 2);
         }
     }
 
@@ -149,29 +127,6 @@ define([
                     visible: true
                 });
                 break;
-            case 'step3':
-                $('#step3').show();
-                connection.trigger('updateButton', {
-                     button: 'back',
-                     visible: true
-                });
-                if (lastStepEnabled) {
-                    connection.trigger('updateButton', {
-                        button: 'next',
-                        text: 'next',
-                        visible: true
-                    });
-                } else {
-                    connection.trigger('updateButton', {
-                        button: 'next',
-                        text: 'done',
-                        visible: true
-                    });
-                }
-                break;
-            case 'step4':
-                $('#step4').show();
-                break;
         }
     }
 
@@ -184,12 +139,9 @@ define([
         // set by this activity's config.json file.  Any property
         // may be overridden as desired.
         payload.name = name;
-
-        payload['arguments'].execute.inArguments = [{ "message": value }];
-
-        payload['metaData'].isConfigured = true;
-
-        connection.trigger('updateActivity', payload);
+		payload['arguments'].execute.inArguments = [{ "message": value }];
+		payload['metaData'].isConfigured = true;
+		connection.trigger('updateActivity', payload);
     }
 
     function getMessage() {

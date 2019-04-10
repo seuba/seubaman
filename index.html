@@ -1,65 +1,55 @@
 <!DOCTYPE html>
-
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>Weather activity</title>
-
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.js"></script> 
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/postmonger@0.0.16/postmonger.js"></script>
-    <script type="text/javascript">
-        (function() {
-            var config = {
-                baseUrl: ''
-            };
-
-            var dependencies = [
-                'customActivity'
-            ];
-
-            require(config, dependencies);
-        })();
-    </script>
-
-    <!--Styles-->
-    <style type="text/css">
-        body {
-            padding: 20px;
-            margin: 0;
-        }
-        .step {
-            display: none;
-        }
-        #step1 {
-            display: block;
-        }
-    </style>
-
-</head>
-<body>
-
-<div id="step1" class="step" style="width:100%">
-
-    Select the weather:
-    <select id="select1" style="width:100%;padding:10px">
-        
-        <option value="pluja">plou</option>
- <option value="neu">neu</option>
-  <option value="sol">sol</option>
-
-    </select>
-
-    <button id="toggleLastStep">Toggle Last Step</button>
-</div>
-<div id="step2" class="step">
-    Here's a second page with some info on it.
-</div>
-<div id="step3" class="step">
-    You chose the weather: <div id="message"></div>
-</div>
-<div id="step4" class="step">
-    Hey, here's a fourth step, just for you.  Toggle this on or off from step 1.
-</div>
-</body>
+	<head>
+		<meta charset="utf-8">
+		<title>Weather activity</title>
+		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.js"></script> 
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/postmonger@0.0.16/postmonger.js"></script>
+		<script type="text/javascript">
+			(function() {
+				var config = {
+					baseUrl: ''
+				};
+				var dependencies = [
+					'customActivity'
+				];
+				require(config, dependencies);
+			})();
+		</script>
+		<style type="text/css">
+		   .step {
+				display: none;
+			}
+			#step1 {
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="section">
+			<div class="row">
+				<div class="col-md-12">
+					<div id="step1" class="step">
+						<select id="select1" class="browser-default custom-select custom-select-lg mb-3">
+						    <option selected>Select the weather</option>
+							<option value="rain">Rainning</option>
+							<option value="snow">Snowing</option>
+							<option value="sun">Sunny</option>
+						</select>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section">
+			<div class="row">
+				<div class="col-md-12">			
+					<div id="step2" class="step">
+						<p><b>You chose the weather:</b><br/><div id="message"></div></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>
