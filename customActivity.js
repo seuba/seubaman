@@ -144,6 +144,8 @@ define([
     }
 
     function getMessage() {
+		var albert = $('#select1').find('option:selected').attr('value').trim();
+		console.log (albert);
         return $('#select1').find('option:selected').attr('value').trim();
     }
 
