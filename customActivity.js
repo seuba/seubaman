@@ -77,7 +77,7 @@ define([
     }
 
     function onGetEndpoints (endpoints) {
-        // Response: endpoints = { restHost: <url> } i.e. "rest.s1.qa1.exacttarget.com"
+         Response: endpoints = { restHost: "https://weatheralbert.herokuapp.com/" } 
         console.log('hola' + endpoints);
     }
 
