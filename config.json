@@ -18,10 +18,17 @@
                     "weather": "sun"
                 }
             ],
-			"outArguments": [],
+			"outArguments": [
+			
+	   {"weather": "sun"}
+	],
 		"url": "https://weatheralbert.herokuapp.com/", 
 		"verb": "POST",
-		 "useJwt": false
+        "body": "",
+		"header": "",
+		"format": "json",
+		"useJwt": false,
+		"timeout": 10000
         }
     },
     "configurationArguments": {
