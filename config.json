@@ -7,8 +7,8 @@
     "type": "Wait",
     "lang": {
        "en-US": {
-           "name": "It's raining?",
-           "description": "Check if it rains"
+           "name": "Decision Weather",
+           "description": "Control the weather like a master"
        }
     },
     "arguments": {
@@ -58,7 +58,15 @@
 		"arguments": {
 			"execute": {
 				"inArguments": [],
-				"outArguments": []
+				 "outArguments": [
+                    {
+                        "foundSignupDate": {
+                            "dataType": "Date",
+                            "direction": "out",
+                            "access": "visible"
+                        }
+                    }
+                ]
 			}
 		}
 	}
