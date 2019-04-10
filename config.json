@@ -58,10 +58,10 @@
 		"arguments": {
 			"execute": {
 				"inArguments": [],
-				 "outArguments": [
                     {
-                        "foundSignupDate": {
-                            "dataType": "Date",
+				 "outArguments": [
+                        "weather": {
+                            "dataType": "Text",
                             "direction": "out",
                             "access": "visible"
                         }
