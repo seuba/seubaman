@@ -20,9 +20,9 @@
             ],
 			"outArguments": [
 			
-	   {"weather": "sun"}
+	   
 	],
-		"url": "https://weatheralbert.herokuapp.com/", 
+		"url": "https://weatheralbert.herokuapp.com/temps.php", 
 		"verb": "POST",
         "body": "",
 		"header": "",
