@@ -69,8 +69,9 @@
 				 "outArguments": [
                     {
                         "weather": {
-                            "dataType": "Text",
+                            "dataType": "Boolean",
                             "direction": "out",
+			    "readOnly": true,
                             "access": "visible"
                         }
                     }
