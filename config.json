@@ -4,7 +4,7 @@
        "icon": "images/sms.jpg",
        "category": "flow"
     },
-    "type": "Wait",
+    "type": "REST",
     "lang": {
        "en-US": {
            "name": "Decision Weather",
