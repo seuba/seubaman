@@ -14,11 +14,12 @@
     "arguments": {
         "execute": {
             "inArguments": [
-                {
-                    "weather": "sun"
-                }
+                
             ],
 			"outArguments": [
+			 {
+                    "weather": ""
+                }
 			
 	   
 	],
@@ -37,7 +38,7 @@
 		  "verb": "POST"
        },
        "publish": {
-          "url": "https://weatheralbert.herokuapp.com/",
+          "url": "https://weatheralbert.herokuapp.com/temps.php",
 		  "verb": "POST"
        },
        "validate": {
