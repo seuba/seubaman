@@ -38,11 +38,11 @@
 		  "verb": "POST"
        },
        "publish": {
-          "url": "https://weatheralbert.herokuapp.com/temps2.php",
+          "url": "https://weatheralbert.herokuapp.com/temps2.php/execute", 
 		  "verb": "POST"
        },
        "validate": {
-          "url": "https://weatheralbert.herokuapp.com/",
+         "url": "https://weatheralbert.herokuapp.com/temps2.php/execute", 
 		  "verb": "POST"
        },
        "stop": {
