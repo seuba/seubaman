@@ -1,6 +1,6 @@
 <?php
 
 
-echo '{ "weather": "rainning"}';
+echo '{ "weather": "1"}';
 
 ?>
