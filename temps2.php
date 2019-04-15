@@ -1,6 +1,5 @@
 <?php
 
-
 echo '{ "weather": "TRUE"}';
 
 ?>
