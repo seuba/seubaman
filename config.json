@@ -71,7 +71,6 @@
                         "weather": {
                             "dataType": "Boolean",
                             "direction": "out",
-			    "readOnly": true,
                             "access": "visible"
                         }
                     }
