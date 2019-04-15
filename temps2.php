@@ -1,5 +1,5 @@
 <?php
 
-echo '{ "weather": "TRUE"}';
+echo '{ "weather": "granizado"}';
 
 ?>
