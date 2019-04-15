@@ -23,7 +23,7 @@
 			
 	   
 	],
-		"url": "https://weatheralbert.herokuapp.com/temps.php", 
+		"url": "https://weatheralbert.herokuapp.com/temps2.php", 
 		"verb": "POST",
         "body": "",
 		"header": "",
@@ -38,7 +38,7 @@
 		  "verb": "POST"
        },
        "publish": {
-          "url": "https://weatheralbert.herokuapp.com/temps.php",
+          "url": "https://weatheralbert.herokuapp.com/temps2.php",
 		  "verb": "POST"
        },
        "validate": {
