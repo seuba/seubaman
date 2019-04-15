@@ -23,7 +23,7 @@
 			
 	   
 	],
-		"url": "https://weatheralbert.herokuapp.com/temps2.php", 
+		"url": "https://weatheralbert.herokuapp.com/temps2.php/execute", 
 		"verb": "POST",
         "body": "",
 		"header": "",
