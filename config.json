@@ -70,9 +70,10 @@
 				 "outArguments": [
                     {
                         "weather": {
-                            "dataType": "Text",
-                            "direction": "out",
-                            "access": "visible"
+                           	"dataType": "Text",
+			 	"isNullable": false,
+             			"access": "Visible",
+             			"direction": "Out"
                         }
                     }
                 ]
