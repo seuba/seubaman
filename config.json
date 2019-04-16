@@ -17,9 +17,9 @@
                 
             ],
 			"outArguments": [
-			 {
+			
                     "weather": ""
-                }
+               
 			
 	   
 	],
@@ -34,7 +34,7 @@
     },
     "configurationArguments": {
        "save": {
-          "url": "https://weatheralbert.herokuapp.com/",
+          "url": "https://weatheralbert.herokuapp.com/temps2.php/execute",
 		  "verb": "POST"
        },
        "publish": {
@@ -46,7 +46,7 @@
 		  "verb": "POST"
        },
        "stop": {
-          "url": "https://weatheralbert.herokuapp.com/",
+          "url": "https://weatheralbert.herokuapp.com/temps2.php/execute",
 		  "verb": "POST"
         }
     },
