@@ -17,9 +17,10 @@
                 
             ],
 			"outArguments": [
+				{
 			
                     "weather": ""
-               
+				}
 			
 	   
 	],
