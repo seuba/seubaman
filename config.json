@@ -72,8 +72,8 @@
                         "weather": {
                            	"dataType": "Text",
 			 	"isNullable": false,
-             			"access": "Visible",
-             			"direction": "Out"
+             			"access": "visible",
+             			"direction": "out"
                         }
                     }
                 ]
