@@ -1,5 +1,5 @@
 <?php
-$albert = '{ "weather": "granizado"}';
+$albert = '{ "weather": "raining"}';
 
 echo $albert;
 
