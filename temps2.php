@@ -43,7 +43,7 @@ curl_close ($ch);
 // por ejemplo, los mostramos
 
 
-echo '{"foundSignupDate": "2019-04-23"}';
+echo '{"foundSignupDate": granizado"}';
 
 
 
