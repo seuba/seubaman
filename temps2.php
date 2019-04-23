@@ -41,7 +41,7 @@ curl_close ($ch);
  
 // hacemos lo que queramos con los datos recibidos
 // por ejemplo, los mostramos
-print_r($remote_server_output);
+echo $temps;
 
 
 
