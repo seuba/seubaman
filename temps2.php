@@ -1,8 +1,8 @@
 <?php
-/*$json4 = '{
+$json4 = '{
         "inArguments":[ 
                 {
-                    "emailAddress": "albert@gmail.com"
+                    "message": "pum"
                 }]
             ,
         "outArguments": [
@@ -16,9 +16,9 @@
         "keyValue": "someContactKeyHere",
         "mode": 0
 }';
-*/
 
-$json4 = file_get_contents('php://input');
+
+/* $json4 = file_get_contents('php://input'); */
 $object = json_decode($json4, true);
 
 
