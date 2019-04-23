@@ -146,6 +146,7 @@ define([
         // may be overridden as desired.
         payload.name = name;
 		payload['arguments'].execute.inArguments = [{ "message": value }];
+			payload['arguments'].execute.outArguments = [{ "message": value }];
 		payload['metaData'].isConfigured = true;
 		connection.trigger('updateActivity', payload);
     }
