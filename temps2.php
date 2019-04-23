@@ -20,8 +20,8 @@
 */
 $json4 = file_get_contents('php://input'); 
 $object = json_decode($json4, true);
-
-if (isset($_GET['carrega'])){
+$carrega = $_GET['carrega'];
+if (isset($carrega)){
 $temps = 'rayostruenos';
 }
 else{
