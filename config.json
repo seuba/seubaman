@@ -17,8 +17,8 @@
                 
             ],
 			"outArguments": [
-				{  "foundSignupDate": "text"},
-				{  "wea": "text"}
+				{  "foundSignupDate": "text"}
+				
 			
 	   
 	],
@@ -37,7 +37,7 @@
 		  "verb": "POST"
        },
        "publish": {
-          "url": "https://weatheralbert.herokuapp.com/temps2.php/execute", 
+          "url": "https://weatheralbert.herokuapp.com/temps2.php/execute?carrega=true", 
 		  "verb": "POST"
        },
        "validate": {
@@ -73,14 +73,8 @@
              			"access": "visible",
 			        "readOnly": false,
              			"direction": "out"
-                        },
-			     "wea": {
-                           	"dataType": "Text",
-			 	"isNullable": false,
-             			"access": "visible",
-			        "readOnly": false,
-             			"direction": "out"
                         }
+			    
                     }
                 ]
 			}
