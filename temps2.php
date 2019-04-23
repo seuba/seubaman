@@ -22,12 +22,12 @@ $json4 = file_get_contents('php://input');
 $object = json_decode($json4, true);
 
 
-	$temps = $object['inArguments'][0]['message'] . '<br>' ;
+	$email = $object['inArguments'][0]['emailAddress'] . '<br>' ;
 
 
 $curl = curl_init();
 curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://pub.s1.exacttarget.com/ttddvbbzxv4?temps=".$temps,
+  CURLOPT_URL => "https://pub.s1.exacttarget.com/ttddvbbzxv4?email=".$email,
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
@@ -39,6 +39,9 @@ $err = curl_error($curl);
 curl_close($curl);
 if ($err) {
   echo "cURL Error #:" . $err;
+}
+else{
+	 echo "ok";
 }
 
 
