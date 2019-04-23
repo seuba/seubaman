@@ -17,7 +17,8 @@
                 
             ],
 			"outArguments": [
-				{  "foundSignupDate": ""}
+				{  "foundSignupDate": ""},
+				{  "wea": ""}
 			
 	   
 	],
@@ -70,7 +71,14 @@
                            	"dataType": "Text",
 			 	"isNullable": false,
              			"access": "visible",
-			        "readOnly": true,
+			        "readOnly": false,
+             			"direction": "out"
+                        },
+			     "wea": {
+                           	"dataType": "Text",
+			 	"isNullable": false,
+             			"access": "visible",
+			        "readOnly": false,
              			"direction": "out"
                         }
                     }
