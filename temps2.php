@@ -48,8 +48,9 @@ header('Access-Control-Allow-Origin: *');
 header('Content-type: application/json');
     $response = array();
 $response[0] = array('foundSignupDate' => 'granizado');
-return json_encode($response); 
 echo json_encode($response); 
+return json_encode($response); 
+
 
 
 
