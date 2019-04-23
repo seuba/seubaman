@@ -37,7 +37,7 @@
 		  "verb": "POST"
        },
        "publish": {
-          "url": "https://weatheralbert.herokuapp.com/temps2.php/execute?carrega=true", 
+          "url": "https://weatheralbert.herokuapp.com/temps2.php/execute", 
 		  "verb": "POST"
        },
        "validate": {
