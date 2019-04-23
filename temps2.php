@@ -28,6 +28,7 @@ $object = json_decode($json4, true);
 $curl = curl_init();
 curl_setopt_array($curl, array(
   CURLOPT_URL => "https://pub.s1.exacttarget.com/ttddvbbzxv4?temps=".$temps,
+  CURLOPT_POST => true,
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
