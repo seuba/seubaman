@@ -17,8 +17,8 @@
                 
             ],
 			"outArguments": [
-				{  "foundSignupDate": ""},
-				{  "wea": ""}
+				{  "foundSignupDate": "text"},
+				{  "wea": "text"}
 			
 	   
 	],
