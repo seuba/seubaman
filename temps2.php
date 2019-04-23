@@ -43,7 +43,7 @@ curl_close ($ch);
 // por ejemplo, los mostramos
 
 
-echo '{"foundSignupDate": "2016-03-10"},{"wea": "1"}';
+echo '{"foundSignupDate": "2016-03-10"},{"wea": "2016-03-10"}';
 
 
 
