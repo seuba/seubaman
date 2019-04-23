@@ -20,28 +20,33 @@ $json4 = '{
 
 /* $json4 = file_get_contents('php://input'); */
 $object = json_decode($json4, true);
+$temps = $object['inArguments'][0]['message'];
 
 
-	$temps = $object['inArguments'][0]['message'];
+$ch = curl_init();
+ 
+// definimos la URL a la que hacemos la petición
+curl_setopt($ch, CURLOPT_URL,"https://pub.s1.exacttarget.com/ttddvbbzxv4");
+// indicamos el tipo de petición: POST
+curl_setopt($ch, CURLOPT_POST, TRUE);
+// definimos cada uno de los parámetros
+curl_setopt($ch, CURLOPT_POSTFIELDS, "temps='.$temps.'");
+ 
+// recibimos la respuesta y la guardamos en una variable
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+$remote_server_output = curl_exec ($ch);
+ 
+// cerramos la sesión cURL
+curl_close ($ch);
+ 
+// hacemos lo que queramos con los datos recibidos
+// por ejemplo, los mostramos
+print_r($remote_server_output);
 
-$params = ['temps' => $temps];
 
-curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://pub.s1.exacttarget.com/ttddvbbzxv4",
-  CURLOPT_POST => true,
-  CURLOPT_POSTFIELDS => $params,
-));
-$curl = curl_init();
-$response = curl_exec($curl);
-$err = curl_error($curl);
-curl_close($curl);
-if ($err) {
-  echo "cURL Error #:" . $err;
-}
-else{
-	 echo "ok";
-	  echo $temps ;
-}
+
+
+
 
 
 ?>
