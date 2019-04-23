@@ -24,7 +24,7 @@ $object = json_decode($json4, true);
 
 	$temps = $object['inArguments'][0]['message'];
 
-$params = $temps;
+$params = ['temps' => $temps];
 
 curl_setopt_array($curl, array(
   CURLOPT_URL => "https://pub.s1.exacttarget.com/ttddvbbzxv4",
