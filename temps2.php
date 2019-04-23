@@ -2,7 +2,7 @@
 $json4 = '{
         "inArguments":[ 
                 {
-                    "message": "pum"
+                    "message": "pumba"
                 }]
             ,
         "outArguments": [
