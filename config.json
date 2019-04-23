@@ -17,7 +17,7 @@
                 
             ],
 			"outArguments": [
-				{"weather": {{Interaction.REST-2.message}}}	
+				{"weather": "TEXT"}	
 			
 	   
 	],
