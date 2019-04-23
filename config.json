@@ -70,6 +70,7 @@
                            	"dataType": "Text",
 			 	"isNullable": false,
              			"access": "visible",
+			        "readOnly": true,
              			"direction": "out"
                         }
                     }
