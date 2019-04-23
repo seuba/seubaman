@@ -43,13 +43,7 @@ curl_close ($ch);
 // por ejemplo, los mostramos
 
 
-//echo '{"foundSignupDate": granizado"}';
-header('Access-Control-Allow-Origin: *');
-header('Content-type: application/json');
-    $response = array();
-$response[0] = array('foundSignupDate' => 'granizado');
-echo json_encode($response); 
-return json_encode($response); 
+echo '{"foundSignupDate": "2016-03-10"}';
 
 
 
