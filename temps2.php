@@ -35,7 +35,9 @@ else{
   $temps = 'false';             
  }
         
-
+if (isset($_GET['ready'])){
+  $temps = '';       
+}
 
 $ch = curl_init();
  
