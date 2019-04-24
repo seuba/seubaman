@@ -18,7 +18,7 @@
 }';
 */
 
-if (isset($_GET['ready'])){
+
         
     $accuweather_temps = 'snow';    
       
@@ -35,10 +35,7 @@ else{
   $temps = 'false';             
  }
         
-        
-}else{
- $temps ='';       
-}
+
 
 $ch = curl_init();
  
