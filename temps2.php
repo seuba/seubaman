@@ -61,7 +61,7 @@ curl_close ($ch);
 
 
 
-echo '{"temps": "$temps"}';
+echo '{"temps": ".'$temps.'"}';
 
 
 ?>
