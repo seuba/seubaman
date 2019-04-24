@@ -26,7 +26,7 @@
   $json4 = file_get_contents('php://input'); 
 $object = json_decode($json4, true);
    $temps = $object['inArguments'][0]['message'];
-echo $temps;
+
 
 if ($temps == $accuweather_temps){
         
@@ -61,7 +61,7 @@ curl_close ($ch);
 
 
 
-echo '{"foundSignupDate": "2016-03-10"}';
+echo '{"temps": "$temps"}';
 
 
 ?>
