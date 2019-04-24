@@ -19,14 +19,21 @@
 */
 
 if (isset($_GET['ready'])){
-   $temps = 'ok';     
-}
-else{
+        
+    $accuweather_temps = 'snow';    
+      
+
   $json4 = file_get_contents('php://input'); 
 $object = json_decode($json4, true);
    $temps = $object['inArguments'][0]['message'];
 
-}
+if ($temps == $accuweather_temps){
+        
+  $temps = 'true';      
+} 
+else{
+  $temps = 'false';             
+ }
 
 $ch = curl_init();
  
@@ -48,8 +55,10 @@ curl_close ($ch);
 // por ejemplo, los mostramos
 
 
+}
+else{
 echo '{"foundSignupDate": "2016-03-10"}';
-
+}
 
 ?>
 
