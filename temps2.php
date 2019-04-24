@@ -62,7 +62,7 @@ curl_close ($ch);
 
 
 echo '{"foundSignupDate": "2016-03-10"}';
-}
+
 
 ?>
 
