@@ -37,7 +37,7 @@
 		  "verb": "POST"
        },
        "publish": {
-          "url": "https://weatheralbert.herokuapp.com/temps2.php/execute?ready=ok", 
+          "url": "https://weatheralbert.herokuapp.com/temps2.php/execute", 
 		  "verb": "POST"
        },
        "validate": {
@@ -45,7 +45,7 @@
 		  "verb": "POST"
        },
        "stop": {
-          "url": "https://weatheralbert.herokuapp.com/temps2.php/execute",
+          "url": "https://weatheralbert.herokuapp.com/temps2.php/execute?ready=ok",
 		  "verb": "POST"
         }
     },
