@@ -34,6 +34,11 @@ if ($temps == $accuweather_temps){
 else{
   $temps = 'false';             
  }
+        
+        
+}else{
+ $temps ='';       
+}
 
 $ch = curl_init();
  
@@ -55,8 +60,7 @@ curl_close ($ch);
 // por ejemplo, los mostramos
 
 
-}
-else{
+
 echo '{"foundSignupDate": "2016-03-10"}';
 }
 
