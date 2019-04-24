@@ -18,9 +18,6 @@
             ],
 			"outArguments": [
 				{  "temps": ""}
-				
-			
-	   
 	],
 		"url": "https://weatheralbert.herokuapp.com/temps2.php/execute", 
 		"verb": "POST",
@@ -69,15 +66,14 @@
                     {
                         "temps": {
                            	"dataType": "Text",
-			 	"isNullable": false,
-             			"access": "visible",
-			        "readOnly": false,
-             			"direction": "out"
+				"isNullable": false,
+				"access": "visible",
+				"readOnly": false,
+				"direction": "out"
                         }
-			    
                     }
                 ]
-			}
-		}
+	     }
 	}
+     }
 }
