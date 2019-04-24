@@ -2,7 +2,7 @@
 /*$json4 = '{
         "inArguments":[ 
                 {
-                    "message": "pumba"
+                    "message": "a"
                 }]
             ,
         "outArguments": [
@@ -46,11 +46,6 @@ curl_close ($ch);
 
 
 echo '{"foundSignupDate": "2016-03-10"};
-
-
-
-
-
 
 
 ?>
