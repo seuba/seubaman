@@ -1,68 +1,46 @@
 <?php
-/*$json4 = '{
-        "inArguments":[ 
-                {
-                    "message": "a"
-                }]
-            ,
-        "outArguments": [
-                 
-                ],
-        "activityObjectID": "1234abcd-56ef-78gh-90ij-9876klmn5432",
-        "journeyId": "1234abcd-56ef-78gh-90ij-9876klmn5432",
-        "activityId": "1234abcd-56ef-78gh-90ij-9876klmn5432",
-        "definitionInstanceId": "1234abcd-56ef-78gh-90ij-9876klmn5432",
-        "activityInstanceId": "1234abcd-56ef-78gh-90ij-9876klmn5432",
-        "keyValue": "someContactKeyHere",
-        "mode": 0
-}';
-*/
+/********************************************************/
+/*			Control the weather V1.0					*/
+/*			By Albert Seuba	- 042319					*/
+/********************************************************/
 
+/* Consultamos el tiempo actual (ciudad=Barcelona), 
+podemos variar la url pasando una variable desde inArguments y transformando country a su código */
+$curl = curl_init();
+curl_setopt_array($curl, array(
+  CURLOPT_URL => "http://dataservice.accuweather.com/currentconditions/v1/307297?apikey=aE0Mu6wczdfgTIZacsEksP0KBDAUYZjr",
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => "",
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 30,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1
+));
 
-        
-    $accuweather_temps = 'snow';    
-      
+$response = curl_exec($curl);
+$err = curl_error($curl);
+curl_close($curl);
 
-  $json4 = file_get_contents('php://input'); 
+if ($err) {
+  echo "cURL Error #:" . $err;
+} else {
+
+	$tempsbarcelona = json_decode($response);
+	$accuweather_temps = $tempsbarcelona[0]->{'WeatherText'};
+};
+// parseamos el json por cada user que entra en el journey
+$json4 = file_get_contents('php://input'); 
 $object = json_decode($json4, true);
-   $temps = $object['inArguments'][0]['message'];
-
-
-if ($temps == $accuweather_temps){
-        
-  $temps = 'true';      
-} 
-else{
-  $temps = 'false';             
- }
-        
-if (isset($_GET['ready'])){
-  $temps = '';       
-}
-
-$ch = curl_init();
- 
-// definimos la URL a la que hacemos la petición
-curl_setopt($ch, CURLOPT_URL,"https://pub.s1.exacttarget.com/ttddvbbzxv4");
-// indicamos el tipo de petición: POST
-curl_setopt($ch, CURLOPT_POST, TRUE);
-// definimos cada uno de los parámetros
-curl_setopt($ch, CURLOPT_POSTFIELDS, "temps=$temps");
- 
-// recibimos la respuesta y la guardamos en una variable
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-$remote_server_output = curl_exec ($ch);
- 
-// cerramos la sesión cURL
-curl_close ($ch);
- 
-// hacemos lo que queramos con los datos recibidos
-// por ejemplo, los mostramos
-
-
-
+$temps = $object['inArguments'][0]['message'];
+	if ($temps == $accuweather_temps){
+		$temps = 'true';      
+	} 
+	else{
+		$temps = 'false';             
+	}
+	// cuando paramos el journey, a utilizar si queremos resetear una data extension guardando el valor anterior 
+    if (isset($_GET['ready'])){
+		$temps = '';       
+	}
+//devolvemos el outArgument al config.json para utilizar en la split activity (true | false)
 echo '{"temps":"'.$temps.'"}';
-
-
 ?>
-
