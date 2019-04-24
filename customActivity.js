@@ -8,7 +8,7 @@ define([
     var connection = new Postmonger.Session();
     var payload = {};
     var lastStepEnabled = false;
-    var steps = [ // initialize to the same value as what's set in config.json for consistency
+    var steps = [ 
         { "label": "Step 1", "key": "step1" },
 		{ "label": "Step 2", "key": "step2" }
     ];
@@ -24,11 +24,10 @@ define([
     connection.on('gotoStep', onGotoStep);
 
     function onRender() {
-        // JB will respond the first time 'ready' is called with 'initActivity'
         connection.trigger('ready');
 		connection.trigger('requestTokens');
         connection.trigger('requestEndpoints');
-		 // Disable the next button if a value isn't selected
+		
         $('#select1').change(function() {
             var message = getMessage();
             connection.trigger('updateButton', { button: 'next', enabled: Boolean(message) });
@@ -59,11 +58,9 @@ define([
             });
         });
 
-        // If there is no message selected, disable the next button
         if (!message) {
             showStep(null, 1);
             connection.trigger('updateButton', { button: 'next', enabled: false });
-            // If there is a message, skip to the summary step
         } else {
             $('#select1').find('option[value='+ message +']').attr('selected', 'selected');
             $('#message').html(message);
@@ -72,13 +69,10 @@ define([
     }
 
     function onGetTokens (tokens) {
-        // Response: tokens = { token: <legacy token>, fuel2token: <fuel api token> }
-        console.log(tokens);
+         console.log(tokens);
     }
 
     function onGetEndpoints (endpoints) {
-         Response: endpoints = { restHost: "https://weatheralbert.herokuapp.com/" } 
-        console.log('holaS' + endpoints.restHost);
     }
 
     function onClickedNext () {
@@ -140,13 +134,8 @@ define([
         var name = $('#select1').find('option:selected').html();
         var value = getMessage();
 
-        // 'payload' is initialized on 'initActivity' above.
-        // Journey Builder sends an initial payload with defaults
-        // set by this activity's config.json file.  Any property
-        // may be overridden as desired.
         payload.name = name;
 		payload['arguments'].execute.inArguments = [{ "message": value }];
-			//payload['arguments'].execute.outArguments = [{ "weather": value }];
 		payload['metaData'].isConfigured = true;
 		connection.trigger('updateActivity', payload);
     }
