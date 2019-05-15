@@ -8,7 +8,7 @@
 podemos variar la url pasando una variable desde inArguments y transformando country a su código */
 $curl = curl_init();
 curl_setopt_array($curl, array(
-  CURLOPT_URL => "http://dataservice.accuweather.com/currentconditions/v1/307297?apikey=YOUR API KEY",
+  CURLOPT_URL => "http://dataservice.accuweather.com/currentconditions/v1/307297?apikey=aE0Mu6wczdfgTIZacsEksP0KBDAUYZjr",
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
