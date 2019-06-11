@@ -24,7 +24,7 @@
                 
             ],
 			"outArguments": [
-				{  "temps": ""}
+				{  "weather": ""}
 	],
 		"url": "https://weatheralbert.herokuapp.com/temps2.php/execute", 
 		"verb": "POST",
