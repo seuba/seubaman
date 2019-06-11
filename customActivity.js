@@ -133,9 +133,10 @@ define([
     function save() {
         var name = $('#select1').find('option:selected').html();
         var value = getMessage();
+	var value2 = getMessage2();
 
         payload.name = name;
-		payload['arguments'].execute.inArguments = [{ "message": value }];
+		payload['arguments'].execute.inArguments = [{ "message": value },{"ciudad": value2}];
 		payload['metaData'].isConfigured = true;
 		connection.trigger('updateActivity', payload);
     }
@@ -145,5 +146,8 @@ define([
 		console.log (albert);
         return $('#select1').find('option:selected').attr('value').trim();
     }
-
+    function getMessage2() {
+					
+	return $('#message3').val();
+    }
 });
