@@ -13,7 +13,14 @@
     },
     "arguments": {
         "execute": {
-            "inArguments": [
+              "inArguments": [
+		  {
+                            "message": ""
+                        },
+		    {
+                            "ciudad": ""
+                        }
+		    
                 
             ],
 			"outArguments": [
