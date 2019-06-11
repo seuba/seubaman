@@ -71,7 +71,7 @@
 				"inArguments": [],
 				 "outArguments": [
                     {
-                        "temps": {
+                        "weather": {
                            	"dataType": "Text",
 				"isNullable": false,
 				"access": "visible",
