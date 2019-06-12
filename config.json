@@ -1,7 +1,7 @@
 {
     "workflowApiVersion": "1.1",
     "metaData": {
-       "icon": "images/salesforce.png",
+       "icon": "images/sun.png",
        "category": "flow"
     },
     "type": "REST",
