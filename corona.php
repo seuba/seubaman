@@ -25,7 +25,7 @@ echo ($err2);
 curl_close($curl2);
 
 ?>
-<pre class="seuba" id="id">aaa</pre>
+<div class="seuba" id="id">aaa</div>
 <script>
 
 function parseHTML(markup) {
@@ -50,8 +50,9 @@ function parseHTML(markup) {
     }
 }
 var htmll = <?php echo $response2 ?>;
+console.log(htmll);
 var links2 = parseHTML(htmll).getElementsByTagName('title')[0].text;
-
+console.log(lins2);
 var str = links2;
 
 document.getElementById("id").innerHTML= str;
