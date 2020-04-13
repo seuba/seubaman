@@ -20,6 +20,7 @@ curl_setopt_array($curl2, array(
 
 $response2 = curl_exec($curl2);
 $response2 = htmlentities($response2);
+$response2 = str_replace('<!DOCTYPE html> <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]--> <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]--> <!--[if !IE]><!--> <html lang="en"> <!--<![endif]--> <head> <meta charset="utf-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta name="viewport" content="width=device-width, initial-scale=1"> <title>',"");
 echo $response2 ;
 $err2 = curl_error($curl2);
 echo ($err2);
