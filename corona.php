@@ -19,7 +19,7 @@ curl_setopt_array($curl2, array(
 ));
 
 $response2 = curl_exec($curl2);
-echo ($response2);
+echo ("'".$response2."'");
 $err2 = curl_error($curl2);
 echo ($err2);
 curl_close($curl2);
@@ -49,7 +49,7 @@ function parseHTML(markup) {
        return docfrag;
     }
 }
-var htmll = "'" + <?php echo $response2 ?> + "'";
+var htmll = <?php echo $response2 ?>;
 console.log(htmll);
 var links2 = parseHTML(htmll).getElementsByTagName('title')[0].text;
 console.log(linsk2);
