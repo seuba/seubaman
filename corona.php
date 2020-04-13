@@ -20,7 +20,7 @@ curl_setopt_array($curl2, array(
 
 $response2 = curl_exec($curl2);
 $response2 = htmlentities($response2);
-$response2 = str_replace('"',"'");
+
 echo $response2 ;
 $err2 = curl_error($curl2);
 echo ($err2);
