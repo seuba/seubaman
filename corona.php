@@ -52,7 +52,7 @@ function parseHTML(markup) {
 var htmll = "'" + <?php echo $response2 ?> + "'";
 console.log(htmll);
 var links2 = parseHTML(htmll).getElementsByTagName('title')[0].text;
-console.log(lins2);
+console.log(linsk2);
 var str = links2;
 
 document.getElementById("id").innerHTML= str;
