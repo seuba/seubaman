@@ -20,7 +20,7 @@ curl_setopt_array($curl2, array(
 
 $response2 = curl_exec($curl2);
 $response2 = htmlentities($response2);
-
+$response3 = "'".$response2."'";
 echo $response2 ;
 $err2 = curl_error($curl2);
 echo ($err2);
@@ -51,7 +51,7 @@ function parseHTML(markup) {
        return docfrag;
     }
 }
-var htmll = <?php echo $response2 ?>;
+var htmll = <?php echo $response3 ?>;
 console.log(htmll);
 var links2 = parseHTML(htmll).getElementsByTagName('title')[0].text;
 console.log(linsk2);
