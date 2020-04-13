@@ -10,7 +10,7 @@
 /* consultamos codigo ciudad */
 $curl2 = curl_init();
 curl_setopt_array($curl2, array(
-  CURLOPT_URL => "https://www.worldometers.info/coronavirus/",
+  CURLOPT_URL => "https://www.worldometers.info/coronavirus/country/spain/",
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
