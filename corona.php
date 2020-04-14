@@ -64,6 +64,9 @@ var decodedString = decodedString.replace("&lt;meta http-equiv=&quot;X-UA-Compat
 var decodedString = decodedString.replace("&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;", "");
 console.log(decodedString);
 var links2 = parseHTML(decodedString ).getElementsByTagName('title')[0].text;
+  var res = links2.substring(64, 18);
+  var res = res.substring(8, 1);
+  var res = res.replace(",","");
 console.log(links2);
-document.getElementById("id").innerHTML= links2;
+document.getElementById("id").innerHTML= res;
 </script>
