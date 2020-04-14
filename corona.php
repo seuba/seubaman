@@ -55,11 +55,10 @@ function parseHTML(markup) {
 var htmll = <?php echo $response3 ?>;
 var decodedString = atob(htmll);
 console.log(decodedString); // Outputs: "Hello World!"
-console.log(htmll);
-var links2 = parseHTML(htmll).getElementsByTagName('title')[0].text;
+var links2 = parseHTML(decodedString ).getElementsByTagName('title')[0].text;
 console.log(linsk2);
-var str = decodedString;
 
-document.getElementById("id").innerHTML= str;
+
+document.getElementById("id").innerHTML= links2;
 
 </script>
