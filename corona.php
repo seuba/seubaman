@@ -53,8 +53,8 @@ function parseHTML(markup) {
 }
 var htmll = <?php echo $response3 ?>;
 var decodedString = atob(htmll);
-var decodedString = decodedString.replace("&lt;title&gt;", "<!doctype html><html><head><title>");
-var decodedString = decodedString.replace("&lt;/title&gt;", "</title></head><body><a>Link 1</a><a>Link 2</a></body></html>");
+var decodedString = decodedString.replace("&lt;title&gt;", "'<!doctype html><html><head><title>");
+var decodedString = decodedString.replace("&lt;/title&gt;", "</title></head><body><a>Link 1</a><a>Link 2</a></body></html>'");
 var decodedString = decodedString.replace("&lt;!DOCTYPE html&gt;", "");
 var decodedString = decodedString.replace("&lt;!--[if IE 8]&gt; &lt;html lang=&quot;en&quot; class=&quot;ie8&quot;&gt; &lt;![endif]--&gt;", "");
 var decodedString = decodedString.replace("&lt;!--[if IE 9]&gt; &lt;html lang=&quot;en&quot; class=&quot;ie9&quot;&gt; &lt;![endif]--&gt;", "");
@@ -63,7 +63,7 @@ var decodedString = decodedString.replace("&lt;head&gt;", "");
 var decodedString = decodedString.replace("&lt;meta charset=&quot;utf-8&quot;&gt;", "");
 var decodedString = decodedString.replace("&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;", "");
 var decodedString = decodedString.replace("&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;", "");
-console.log(decodedString); // Outputs: "Hello World!"
+console.log(decodedString);
 var links2 = parseHTML(decodedString ).getElementsByTagName('title')[0].text;
 console.log(linsk2);
 document.getElementById("id").innerHTML= links2;
