@@ -1,13 +1,13 @@
 <?php
 /********************************************************/
-/*			Coronavirus V1.0					*/
+/*			Coronavirus V1.0					*/  
 /*			By Albert Seuba	- 041320					*/
 /********************************************************/
 
 /* parseamos in arguments del journey */
 
 
-/* consultamos codigo ciudad */
+/* consultamos codigo ciudad */ 
 $curl2 = curl_init();
 curl_setopt_array($curl2, array(
   CURLOPT_URL => "https://www.worldometers.info/coronavirus/country/spain/",
