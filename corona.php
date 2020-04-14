@@ -5,7 +5,11 @@
 /********************************************************/
 
 /* parseamos in arguments del journey */
-
+$infectats = $_GET['infected'];
+if(isset($infectats)){
+  echo $infectats;
+}
+else{
 
 /* consultamos codigo ciudad */ 
 $curl2 = curl_init();
@@ -73,3 +77,4 @@ console.log(links2);
 document.getElementById("id").value= res;
   document.getElementById("resultat").submit();
 </script>
+<?php } ?>
