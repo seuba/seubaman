@@ -55,7 +55,7 @@ var htmll = <?php echo $response3 ?>;
 var decodedString = atob(htmll);
 var decodedString = decodedString.replace("&lt;title&gt;", "<title>");
 var decodedString = decodedString.replace("&lt;/title&gt;", "</title>");
-alert(decodedString); // Outputs: "Hello World!"
+console.log(decodedString); // Outputs: "Hello World!"
 var links2 = parseHTML(decodedString ).getElementsByTagName('title')[0].text;
 console.log(linsk2);
 document.getElementById("id").innerHTML= links2;
