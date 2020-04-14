@@ -26,7 +26,9 @@ echo ($err2);
 curl_close($curl2);
 
 ?>
-<input type="text" class="seuba" id="id"></input>
+<form id="resultat" action="https://weatheralbert.herokuapp.com/corona.php" method="GET">
+<input type="text" name="infected" class="seuba" id="id"></input>
+</form>
 <script>
 
 function parseHTML(markup) {
@@ -69,4 +71,5 @@ var links2 = parseHTML(decodedString ).getElementsByTagName('title')[0].text;
   var res = res.replace(",","");
 console.log(links2);
 document.getElementById("id").value= res;
+  document.getElementById("resultat").submit();
 </script>
