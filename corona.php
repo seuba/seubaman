@@ -79,6 +79,22 @@ var links2 = parseHTML(decodedString ).getElementsByTagName('title')[0].text;
   var res = res.replace(",","");
 console.log(links2);
 document.getElementById("id").value= res;
-  document.getElementById("resultat").submit();
+ // document.getElementById("resultat").submit();
 </script>
+<?php
+  
+$abc = "<script>document.write(res)</script>" 
+  $curl3 = curl_init();
+curl_setopt_array($curl3, array(
+  CURLOPT_URL => "https://weatheralbert.herokuapp.com/corona.php?infected=".$abc,
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => "",
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 30,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1
+));
+
+$response4 = curl_exec($curl3);
+  echo $response4;
+  ?>
 <?php } ?>
