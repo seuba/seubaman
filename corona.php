@@ -56,8 +56,5 @@ var decodedString = atob(htmll);
 alert(decodedString); // Outputs: "Hello World!"
 var links2 = parseHTML(decodedString ).getElementsByTagName('title')[0].text;
 console.log(linsk2);
-
-
 document.getElementById("id").innerHTML= links2;
-
 </script>
