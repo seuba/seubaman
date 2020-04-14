@@ -54,7 +54,7 @@ function parseHTML(markup) {
 }
 var htmll = <?php echo $response3 ?>;
 var decodedString = atob(htmll);
-console.log(decodedString); // Outputs: "Hello World!"
+alert(decodedString); // Outputs: "Hello World!"
 var links2 = parseHTML(decodedString ).getElementsByTagName('title')[0].text;
 console.log(linsk2);
 
