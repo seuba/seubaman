@@ -26,7 +26,7 @@ echo ($err2);
 curl_close($curl2);
 
 ?>
-<div class="seuba" id="id">aaa</div>
+<input type="text" class="seuba" id="id"></input>
 <script>
 
 function parseHTML(markup) {
@@ -68,5 +68,5 @@ var links2 = parseHTML(decodedString ).getElementsByTagName('title')[0].text;
   var res = res.substring(8, 1);
   var res = res.replace(",","");
 console.log(links2);
-document.getElementById("id").innerHTML= res;
+document.getElementById("id").value= res;
 </script>
