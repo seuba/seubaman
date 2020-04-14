@@ -53,8 +53,8 @@ function parseHTML(markup) {
 }
 var htmll = <?php echo $response3 ?>;
 var decodedString = atob(htmll);
-var decodedString = decodedString.replace("&lt;title&gt;", "<title>");
-var decodedString = decodedString.replace("&lt;/title&gt;", "</title>");
+var decodedString = decodedString.replace("&lt;title&gt;", "<!doctype html><html><head><title>");
+var decodedString = decodedString.replace("&lt;/title&gt;", "</title></head><body><a>Link 1</a><a>Link 2</a></body></html>");
 var decodedString = decodedString.replace("&lt;!DOCTYPE html&gt;", "");
 var decodedString = decodedString.replace("&lt;!--[if IE 8]&gt; &lt;html lang=&quot;en&quot; class=&quot;ie8&quot;&gt; &lt;![endif]--&gt;", "");
 var decodedString = decodedString.replace("&lt;!--[if IE 9]&gt; &lt;html lang=&quot;en&quot; class=&quot;ie9&quot;&gt; &lt;![endif]--&gt;", "");
