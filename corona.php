@@ -8,6 +8,10 @@
 $infectats = $_GET['infected'];
 if(isset($infectats)){
   echo $infectats;
+  $myfile = fopen("corona.txt", "w") or die("Unable to open file!");
+$txt = $infectats;
+fwrite($myfile, $txt);
+fclose($myfile);
 }
 else{
 
