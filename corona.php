@@ -27,7 +27,7 @@ curl_setopt_array($curl2, array(
 ));
 
 $response2 = curl_exec($curl2);
-$response2 = htmlentities($response2);
+
 $response3 = '"'.base64_encode($response2).'"';
 $err2 = curl_error($curl2);
 echo ($err2);
@@ -97,7 +97,7 @@ curl_setopt_array($curl3, array(
 $response4 = curl_exec($curl3);
   echo $response4;
   echo 'aqui-------';
-  $html = file_get_html('https://www.worldometers.info/coronavirus/country/spain/');
+  $html = file_get_html($response2);
 $title = $html->find('title');
   echo 'el titol es'.$title;
   function get_html_title($html){
