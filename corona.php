@@ -84,9 +84,7 @@ document.getElementById("id").value= res;
 <?php
   
 $abc = "<script>document.write(res)</script>" 
-$bcd = "https://weatheralbert.herokuapp.com/corona.php?infected=".$abc
 
-  echo $bcd;
   ?>
 <?php } ?>
 
