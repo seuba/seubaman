@@ -33,7 +33,7 @@ echo ($err2);
 curl_close($curl2);
 
  function get_html_title($html){
-    preg_match("/\<title.*\>(.*)\<\/title\>/isU", $html, $matches);
+    preg_match("/\<span.*\>(.*)\<\/span\>/isU", $html, $matches);
     return $matches[1];
 }
 $html = get_html_title($response2);
