@@ -81,5 +81,12 @@ console.log(links2);
 document.getElementById("id").value= res;
  // document.getElementById("resultat").submit();
 </script>
+<?php
+  
+$abc = "<script>document.write(res)</script>" 
+$bcd = "https://weatheralbert.herokuapp.com/corona.php?infected=".$abc
 
+  echo $bcd;
+  ?>
 <?php } ?>
+
