@@ -97,7 +97,7 @@ curl_setopt_array($curl3, array(
 $response4 = curl_exec($curl3);
   echo $response4;
   echo 'aqui-------';
-  $html = file_get_html($response2);
+  $html = get_html_title($response2);
   echo 'html es:'.$html;
 $title = $html->find('title');
   echo 'el titol es'.$title;
