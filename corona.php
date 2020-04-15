@@ -102,7 +102,7 @@ $response4 = curl_exec($curl3);
     return $matches[1];
 }
    echo "html es:";
-  $html = get_html_title("<html><head><title>curl page title</title></head></html>");
+  $html = get_html_title($response2);
   echo "html es:".$html;
 $title = $html->find('title');
   echo 'el titol es'.$title;
