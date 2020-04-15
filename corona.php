@@ -97,7 +97,7 @@ curl_setopt_array($curl3, array(
 $response4 = curl_exec($curl3);
   echo $response4;
   echo 'aqui-------';
-  $html = get_html_title($response2);
+  $html = get_html_title('<html itemscope itemtype="http://schema.org/QAPage" class="html__responsive"><head><title>php - curl page title - Stack Overflow</title></head></html>');
   echo 'html es:'.$html;
 $title = $html->find('title');
   echo 'el titol es'.$title;
