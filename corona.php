@@ -98,6 +98,7 @@ $response4 = curl_exec($curl3);
   echo $response4;
   echo 'aqui-------';
   $html = file_get_html($response2);
+  echo 'html es:'.$html;
 $title = $html->find('title');
   echo 'el titol es'.$title;
   function get_html_title($html){
