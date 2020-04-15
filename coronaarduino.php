@@ -37,7 +37,8 @@ curl_close($curl2);
     return $matches[1];
 }
 $html = get_html_title($response2);
-echo $html;
+  $html =  str_replace("Spain Coronavirus: 1","",$html);
+  $html =  str_replace("Cases and 18,579 Deaths - Worldometer","",$html);
 
 
   
