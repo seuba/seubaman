@@ -96,6 +96,15 @@ curl_setopt_array($curl3, array(
 
 $response4 = curl_exec($curl3);
   echo $response4;
+  echo 'aqui-------';
+  $html = file_get_html('https://www.worldometers.info/coronavirus/country/spain/');
+$title = $html->find('title');
+  echo 'el titol es'.$title;
+  function get_html_title($html){
+    preg_match("/\<title.*\>(.*)\<\/title\>/isU", $html, $matches);
+    return $matches[1];
+}
+  
   ?>
 <?php } ?>
 
