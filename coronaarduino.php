@@ -29,6 +29,7 @@ curl_close($curl2);
 $html = get_html_title($response2);
   $html =  str_replace("Spain Coronavirus:","",$html);
   $html =  substr( $html, 1,7); 
+$html =  str_replace(",","",$html);
 
  $myfile = fopen("corona.txt", "w") or die("Unable to open file!");
 $txt = $html;
