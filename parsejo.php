@@ -25,6 +25,7 @@ $innerHTML =  str_replace('</span>
 
  $innerHTML =  str_replace('</span>
 </div>',"",$innerHTML);
+$innerHTML =  str_replace('<span>',"",$innerHTML);
 
 echo $innerHTML;
 ?>
