@@ -26,6 +26,12 @@ curl_close($curl2);
     preg_match("/\<title.*\>(.*)\<\/title\>/isU", $html, $matches);
     return $matches[1];
 }
+function get_html_titles($html2){
+    preg_match("/\<div class="number-table-main">(.*)\<\/div\>/isU", $html2, $matches);
+    return $matches[1];
+}
+$html2 = get_html_titles($response2);
+echo $html2;
 $html = get_html_title($response2);
   $html =  str_replace("Spain Coronavirus:","",$html);
   $html =  substr( $html, 1,7); 
