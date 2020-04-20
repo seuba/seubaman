@@ -43,7 +43,7 @@ $post = [
 ];
   
 $curl4 = curl_init();
-curl_setopt_array($curl2, array(
+curl_setopt_array($curl4, array(
   CURLOPT_URL => "http://cloud.avis-comms.international/cor",
   CURLOPT_POSTFIELDS => $post,
   CURLOPT_RETURNTRANSFER => true,
@@ -55,7 +55,7 @@ curl_setopt_array($curl2, array(
 
 $response4 = curl_exec($curl4);
 echo $response4;
-echo ('done');
+
   ?>
 
 
