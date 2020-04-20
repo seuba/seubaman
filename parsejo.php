@@ -5,7 +5,7 @@ $thediv = $doc->getElementById('maincounter-wrap');
 echo $thediv->textContent;
 
 $dom = new DomDocument();
-$doc->loadHTMLFile('https://www.worldometers.info/coronavirus/country/spain/');
+$dom->loadHTMLFile('https://www.worldometers.info/coronavirus/country/spain/');
 $classname = 'maincounter-number';
 $finder = new DomXPath($dom);
 $nodes = $finder->query("//*[contains(concat(' ', normalize-space(@class), ' '), ' $classname ')]");
