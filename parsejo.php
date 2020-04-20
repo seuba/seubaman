@@ -28,6 +28,10 @@ $innerHTML =  str_replace('</span>
 $innerHTML =  str_replace(',',"",$innerHTML);
 
   $innerHTML1 =  substr( $innerHTML, 0,6); 
+ $innerHTML2 =  substr( $innerHTML, 6,5); 
 echo $innerHTML;
+echo ("---");
 echo $innerHTML1;
+echo ("---");
+echo $innerHTML2;
 ?>
