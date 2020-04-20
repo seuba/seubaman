@@ -35,4 +35,6 @@ echo ("---");
 echo $innerHTML1;
 echo ("---");
 echo $innerHTML2;
+echo ("---");
+echo $innerHTML3;
 ?>
