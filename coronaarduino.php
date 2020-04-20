@@ -31,7 +31,7 @@ function get_html_titles($html2){
     return $matches[1];
 }
 $html2 = get_html_titles($response2);
-echo $html2;
+echo "hola".$html2;
 $html = get_html_title($response2);
   $html =  str_replace("Spain Coronavirus:","",$html);
   $html =  substr( $html, 1,7); 
