@@ -25,5 +25,6 @@ $innerHTML.=trim($tmp_dom->saveHTML());
 <span>',"",$innerHTML);
 $innerHTML =  str_replace('</span>
 </div>',"",$innerHTML);
+$innerHTML =  str_replace(',',"",$innerHTML);
 echo $innerHTML;
 ?>
