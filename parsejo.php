@@ -12,5 +12,7 @@ foreach ($nodes as $node)
     $tmp_dom->appendChild($tmp_dom->importNode($node,true));
     }
 $innerHTML.=trim($tmp_dom->saveHTML()); 
+ $innerHTML =  str_replace('<div class="maincounter-number">
+<span style="color:#aaa">',"",$innerHTML);
 echo $innerHTML;
 ?>
