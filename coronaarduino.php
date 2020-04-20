@@ -36,10 +36,16 @@ $txt = $html;
 fwrite($myfile, $txt);
 fclose($myfile);
 echo $html;
+
+$post = [
+    'number' => $html,
+    
+];
   
 $curl4 = curl_init();
 curl_setopt_array($curl2, array(
-  CURLOPT_URL => "http://cloud.avis-comms.international/cor?number=".$html,
+  CURLOPT_URL => "http://cloud.avis-comms.international/cor",
+  CURLOPT_POSTFIELDS => $post,
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
