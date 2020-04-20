@@ -29,6 +29,7 @@ $innerHTML =  str_replace(',',"",$innerHTML);
 
   $innerHTML1 =  substr( $innerHTML, 0,6); 
  $innerHTML2 =  substr( $innerHTML, 6,5); 
+ $innerHTML3 =  substr( $innerHTML, 11,6);
 echo $innerHTML;
 echo ("---");
 echo $innerHTML1;
