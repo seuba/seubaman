@@ -27,7 +27,7 @@ curl_close($curl2);
     return $matches[1];
 }
 function get_html_titles($html2){
-    preg_match("/\<div class='number-table-main'>(.*)\<\/div\>/isU", $html2, $matches);
+    preg_match("<div class="number-table-main">(.*?)</div>", $html2, $matches);
     return $matches[1];
 }
 $html2 = get_html_titles($response2);
