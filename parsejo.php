@@ -31,13 +31,7 @@ $innerHTML =  str_replace(',',"",$innerHTML);
  $innerHTML2 =  substr( $innerHTML, 6,5); 
  $innerHTML3 =  substr( $innerHTML, 11,6);
 $suma = $innerHTML2 + $innerHTML3;
-echo $innerHTML;
-echo ("---");
-echo $innerHTML1;
-echo ("---");
-echo $innerHTML2;
-echo ("---");
-echo $innerHTML3;
-echo ("-suma-");
-echo $suma;
+$restant = $innerHTML1 - $suma;
+
+echo $restant;
 ?>
