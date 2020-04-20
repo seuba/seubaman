@@ -14,6 +14,6 @@ foreach ($nodes as $node)
 $innerHTML.=trim($tmp_dom->saveHTML()); 
  $innerHTML =  str_replace('<div class="maincounter-number">
 <span style="color:#aaa">',"",$innerHTML);
-
+  $innerHTML =  str_replace(' </span>',"",$innerHTML);
 echo $innerHTML;
 ?>
