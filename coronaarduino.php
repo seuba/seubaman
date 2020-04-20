@@ -1,45 +1,42 @@
 <?php
-/********************************************************/
-/*			Coronavirus V1.0					*/  
-/*			By Albert Seuba	- 041320					*/
-/********************************************************/
 
+$dom = new DomDocument();
+$dom->loadHTMLFile('https://www.worldometers.info/coronavirus/country/spain/');
+$classname = 'maincounter-number';
+$finder = new DomXPath($dom);
+$nodes = $finder->query("//*[contains(concat(' ', normalize-space(@class), ' '), ' $classname ')]");
+$tmp_dom = new DOMDocument(); 
+foreach ($nodes as $node) 
+    {
+    $tmp_dom->appendChild($tmp_dom->importNode($node,true));
+    }
+$innerHTML.=trim($tmp_dom->saveHTML()); 
+ $innerHTML =  str_replace('<div class="maincounter-number">
+<span style="color:#aaa">',"",$innerHTML);
+  $innerHTML =  str_replace(' </span>',"",$innerHTML);
 
-/* consultamos codigo ciudad */ 
-$curl2 = curl_init();
-curl_setopt_array($curl2, array(
-  CURLOPT_URL => "https://www.worldometers.info/coronavirus/country/spain/",
-  CURLOPT_RETURNTRANSFER => true,
-  CURLOPT_ENCODING => "",
-  CURLOPT_MAXREDIRS => 10,
-  CURLOPT_TIMEOUT => 30,
-  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1
-));
+ $innerHTML =  str_replace('
+</div><div class="maincounter-number">
+<span>',"",$innerHTML);
 
-$response2 = curl_exec($curl2);
+ $innerHTML =  str_replace('</span>
+</div><div class="maincounter-number" style="color:#8ACA2B ">
+<span>',"",$innerHTML);
+$innerHTML =  str_replace('</span>
+</div>',"",$innerHTML);
+$innerHTML =  str_replace(',',"",$innerHTML);
 
-$err2 = curl_error($curl2);
-echo ($err2);
-curl_close($curl2);
+  $innerHTML1 =  substr( $innerHTML, 0,6); 
+ $innerHTML2 =  substr( $innerHTML, 6,5); 
+ $innerHTML3 =  substr( $innerHTML, 11,6);
+$suma = $innerHTML2 + $innerHTML3;
+$restant = $innerHTML1 - $suma;
 
- function get_html_title($html){
-    preg_match("/\<title.*\>(.*)\<\/title\>/isU", $html, $matches);
-    return $matches[1];
-}
+echo $restant;
 
-$html = get_html_title($response2);
-  $html =  str_replace("Spain Coronavirus:","",$html);
-  $html =  substr( $html, 1,7); 
-$html =  str_replace(",","",$html);
-
- $myfile = fopen("corona.txt", "w") or die("Unable to open file!");
-$txt = $html;
-fwrite($myfile, $txt);
-fclose($myfile);
-echo $html;
 
 $post = [
-    'number' => $html,
+    'number' => $restant,
     
 ];
   
