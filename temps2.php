@@ -3,7 +3,8 @@
 /*			Control the weather V1.0					*/
 /*			By Albert Seuba	- 042319					*/
 /********************************************************/
-$headerStringValue = $_SERVER['testname'];
+$headerStringValue = $_SERVER['Content-Type'];
+echo 'el valor es '.$headerStringValue;
 $headerStringValue2 = $_SERVER['value'];
 $headerStringValue3 = $_SERVER['HTTP_X_REQUESTED_WITH'];
 $myfile = fopen("file.txt", "w") or die("Unable to open file!");
