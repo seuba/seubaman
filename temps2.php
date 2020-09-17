@@ -6,17 +6,16 @@
 $headerStringValue = $_SERVER['Content-Type'];
 echo 'el valor es '.$headerStringValue;
 $headers = apache_request_headers();
-
+$myfile = fopen("file.txt", "w") or die("Unable to open file!");
 foreach ($headers as $header => $value) {
     echo "$header: $value <br />\n";
+	fwrite($myfile, $header);
+	fwrite($myfile, $value);
 }
-$headerStringValue2 = $_SERVER['value'];
-$headerStringValue3 = $_SERVER['HTTP_X_REQUESTED_WITH'];
-$myfile = fopen("file.txt", "w") or die("Unable to open file!");
 
-fwrite($myfile, $headerStringValue);
-fwrite($myfile, $headerStringValue2);
-fwrite($myfile, $headerStringValue3);
+
+
+
 fclose($myfile);
 /* parseamos in arguments del journey */
 $json4 = file_get_contents('php://input'); 
