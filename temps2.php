@@ -3,7 +3,15 @@
 /*			Control the weather V1.0					*/
 /*			By Albert Seuba	- 042319					*/
 /********************************************************/
+$headerStringValue = $_SERVER['testname'];
+$headerStringValue2 = $_SERVER['value'];
+$headerStringValue3 = $_SERVER['HTTP_X_REQUESTED_WITH'];
+$myfile = fopen("file.txt", "w") or die("Unable to open file!");
 
+fwrite($myfile, $headerStringValue);
+fwrite($myfile, $headerStringValue2);
+fwrite($myfile, $headerStringValue3);
+fclose($myfile);
 /* parseamos in arguments del journey */
 $json4 = file_get_contents('php://input'); 
 $object = json_decode($json4, true);
