@@ -5,6 +5,11 @@
 /********************************************************/
 $headerStringValue = $_SERVER['Content-Type'];
 echo 'el valor es '.$headerStringValue;
+$headers = apache_request_headers();
+
+foreach ($headers as $header => $value) {
+    echo "$header: $value <br />\n";
+}
 $headerStringValue2 = $_SERVER['value'];
 $headerStringValue3 = $_SERVER['HTTP_X_REQUESTED_WITH'];
 $myfile = fopen("file.txt", "w") or die("Unable to open file!");
