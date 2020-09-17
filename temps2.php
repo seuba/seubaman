@@ -12,9 +12,9 @@ foreach ($headers as $header => $value) {
     echo "$header: $value <br />\n";
 	fwrite($myfile, $header);
 	fwrite($myfile, $value);
-	fwrite($myfile, $json4);
+	
 }
-
+fwrite($myfile, $json4);
 
 
 
