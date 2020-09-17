@@ -7,7 +7,7 @@ $headerStringValue = $_SERVER['Content-Type'];
 echo 'el valor es '.$headerStringValue;
 $headers = apache_request_headers();
 $myfile = fopen("file.txt", "w") or die("Unable to open file!");
-$json4 = file_get_contents('php://input')
+$json4 = file_get_contents('php://input');
 foreach ($headers as $header => $value) {
     echo "$header: $value <br />\n";
 	fwrite($myfile, $header);
@@ -20,7 +20,7 @@ foreach ($headers as $header => $value) {
 
 fclose($myfile);
 /* parseamos in arguments del journey */
-; 
+
 $object = json_decode($json4, true);
 $temps = $object['inArguments'][0]['message'];
 $ciudad = $object['inArguments'][1]['ciudad'];
