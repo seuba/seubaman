@@ -29,12 +29,12 @@
 		"url": "https://weatheralbert.herokuapp.com/temps2.php/execute", 
 		"verb": "POST",
         "body": "",
-		"headers": "[{
+		"headers": [{
 	
 	"name":"testname",
 	"value":"testvaue"
 	
-	}]",
+	}],
 		"format": "json",
 		"useJwt": false,
 		"timeout": 10000
