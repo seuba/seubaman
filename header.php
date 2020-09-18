@@ -1,4 +1,3 @@
 <?php
-header("albert: seuba");
-header("unic");
+echo '{"name":"albert"}'
 ?>
