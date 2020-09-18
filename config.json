@@ -29,7 +29,7 @@
 		"url": "https://weatheralbert.herokuapp.com/temps2.php/execute", 
 		"verb": "POST",
         "body": "",
-		"headers": "https://weatheralbert.herokuapp.com/header.php",
+		"header": "https://weatheralbert.herokuapp.com/header.php",
 		"format": "json",
 		"useJwt": false,
 		"timeout": 10000
@@ -39,7 +39,7 @@
        "save": {
           "url": "https://weatheralbert.herokuapp.com/temps2.php/save",
 		  "verb": "POST",
-	       "headers": "https://weatheralbert.herokuapp.com/header.php"     },
+	       "header": "https://weatheralbert.herokuapp.com/header.php"     },
        "publish": {
           "url": "https://weatheralbert.herokuapp.com/", 
 		  "verb": "POST"
