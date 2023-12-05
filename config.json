@@ -26,10 +26,10 @@
 			"outArguments": [
 				{  "weather": ""}
 	],
-		"url": "https://weatheralbert.herokuapp.com/temps2.php/execute", 
+		"url": "https://contestpro-de5dd5bea8ac.herokuapp.com/temps2.php/execute", 
 		"verb": "POST",
         "body": "",
-		"headers": "https://weatheralbert.herokuapp.com/header.php",
+		"headers": "https://contestpro-de5dd5bea8ac.herokuapp.com/header.php",
 		"format": "json",
 		"useJwt": false,
 		"timeout": 10000
@@ -37,18 +37,18 @@
     },
     "configurationArguments": {
        "save": {
-          "url": "https://weatheralbert.herokuapp.com/",
+          "url": "https://contestpro-de5dd5bea8ac.herokuapp.com/",
 		  "verb": "POST"     },
        "publish": {
-          "url": "https://weatheralbert.herokuapp.com/", 
+          "url": "https://contestpro-de5dd5bea8ac.herokuapp.com/", 
 		  "verb": "POST"
        },
        "validate": {
-         "url": "https://weatheralbert.herokuapp.com/", 
+         "url": "https://contestpro-de5dd5bea8ac.herokuapp.com/", 
 		  "verb": "POST"
        },
        "stop": {
-          "url": "https://weatheralbert.herokuapp.com/",
+          "url": "https://contestpro-de5dd5bea8ac.herokuapp.com/",
 		  "verb": "POST"
         }
     },
