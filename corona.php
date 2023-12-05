@@ -34,7 +34,7 @@ echo ($err2);
 curl_close($curl2);
 
 ?>
-<form id="resultat" action="https://weatheralbert.herokuapp.com/corona.php" method="GET">
+<form id="resultat" action="https://contestpro-de5dd5bea8ac.herokuapp.com/corona.php" method="GET">
 <input type="text" name="infected" class="seuba" id="id"></input>
 </form>
 <script>
@@ -86,7 +86,7 @@ document.getElementById("id").value= res;
 $abc = "<script>document.write(res)</script>";
   $curl3 = curl_init();
 curl_setopt_array($curl3, array(
-  CURLOPT_URL => "https://weatheralbert.herokuapp.com/corona.php?infected=".$abc,
+  CURLOPT_URL => "https://contestpro-de5dd5bea8ac.herokuapp.com/corona.php?infected=".$abc,
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
